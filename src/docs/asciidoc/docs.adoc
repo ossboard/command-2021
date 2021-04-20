@@ -1,0 +1,258 @@
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+= 미디어/디지털아크 API Documents
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+
+
+[[introduction]]
+== 소개
+미디어/디지털아크 RESTful API 문서입니다.
+
+[[common]]
+== 공통 사항
+
+API에 전반적인 공통 내용입니다
+
+`현재기준, 데이타는 더미 데이타로, 실제 데이타는 아닙니다.`
+
+=== Domain
+|===
+| 환경 | Domain
+
+| 개발서버
+| `http://10.10.30.44:8079/server/docs`
+
+| 운영서버
+| `http://10.10.30.44:8079/server/docs`
+
+|
+| '/v1/users/apikey' 를 이용해 'apiKey' 발급후 Authorization 에 입력후 테스트 진행
+
+|===
+
+=== Common Response
+
+=== 호출예제
+
+image::images/metaplayer.png[]
+
+[[key]]
+== 인증
+APIKEY 발급/삭제 대한 REST API 예제
+
+=== apiKey 발급 (로그인)
+include::{snippets}/api-key-rest-controller-test/test1_login/curl-request.adoc[]
+include::{snippets}/api-key-rest-controller-test/test1_login/http-request.adoc[]
+include::{snippets}/api-key-rest-controller-test/test1_login/http-response.adoc[]
+
+=== apiKey 삭제 (로그아웃)
+include::{snippets}/api-key-rest-controller-test/test2_logout/curl-request.adoc[]
+include::{snippets}/api-key-rest-controller-test/test2_logout/http-request.adoc[]
+include::{snippets}/api-key-rest-controller-test/test2_logout/http-response.adoc[]
+
+
+[[user]]
+== 회원
+회원에 대한 REST API 예제
+
+=== 회원추가
+include::{snippets}/user-rest-controller-test/test1_create/curl-request.adoc[]
+include::{snippets}/user-rest-controller-test/test1_create/http-request.adoc[]
+include::{snippets}/user-rest-controller-test/test1_create/http-response.adoc[]
+
+=== 회원변경
+include::{snippets}/user-rest-controller-test/test2_update/curl-request.adoc[]
+include::{snippets}/user-rest-controller-test/test2_update/http-request.adoc[]
+include::{snippets}/user-rest-controller-test/test2_update/http-response.adoc[]
+
+=== 회원정보
+include::{snippets}/user-rest-controller-test/test3_info/curl-request.adoc[]
+include::{snippets}/user-rest-controller-test/test3_info/http-request.adoc[]
+include::{snippets}/user-rest-controller-test/test3_info/http-response.adoc[]
+
+=== 회원삭제
+include::{snippets}/user-rest-controller-test/test4_delete/curl-request.adoc[]
+include::{snippets}/user-rest-controller-test/test4_delete/http-request.adoc[]
+include::{snippets}/user-rest-controller-test/test4_delete/http-response.adoc[]
+
+
+[[role]]
+== 역할
+역할에 대한 REST API 예제
+
+=== 롤 추가
+include::{snippets}/role-rest-controller-test/test1_create-role/curl-request.adoc[]
+include::{snippets}/role-rest-controller-test/test1_create-role/http-request.adoc[]
+include::{snippets}/role-rest-controller-test/test1_create-role/http-response.adoc[]
+
+=== 롤 업데이트
+include::{snippets}/role-rest-controller-test/test2_update-role/curl-request.adoc[]
+include::{snippets}/role-rest-controller-test/test2_update-role/http-request.adoc[]
+include::{snippets}/role-rest-controller-test/test2_update-role/http-response.adoc[]
+
+=== 롤 리스트 조회
+include::{snippets}/role-rest-controller-test/test3_role-list/curl-request.adoc[]
+include::{snippets}/role-rest-controller-test/test3_role-list/http-request.adoc[]
+include::{snippets}/role-rest-controller-test/test3_role-list/http-response.adoc[]
+
+=== 롤 제거
+include::{snippets}/role-rest-controller-test/test4_delete-role/curl-request.adoc[]
+include::{snippets}/role-rest-controller-test/test4_delete-role/http-request.adoc[]
+include::{snippets}/role-rest-controller-test/test4_delete-role/http-response.adoc[]
+
+
+[[authority]]
+== 권한
+권한에 대한 REST API 예제
+
+=== 트리형 권한 리스트
+include::{snippets}/authority-rest-controller-test/test1_authority-tree/curl-request.adoc[]
+include::{snippets}/authority-rest-controller-test/test1_authority-tree/http-request.adoc[]
+include::{snippets}/authority-rest-controller-test/test1_authority-tree/http-response.adoc[]
+
+=== 사용자 권한 리스트
+include::{snippets}/authority-rest-controller-test/test2_authority-list/curl-request.adoc[]
+include::{snippets}/authority-rest-controller-test/test2_authority-list/http-request.adoc[]
+include::{snippets}/authority-rest-controller-test/test2_authority-list/http-response.adoc[]
+
+=== 전체 권한 리스트
+include::{snippets}/authority-rest-controller-test/test3_authority-all/curl-request.adoc[]
+include::{snippets}/authority-rest-controller-test/test3_authority-all/http-request.adoc[]
+include::{snippets}/authority-rest-controller-test/test3_authority-all/http-response.adoc[]
+
+
+[[asset]]
+== 에셋
+에셋에 대한 REST API 예제
+
+=== 에셋 생성
+include::{snippets}/asset-rest-controller-test/test1_create-asset/curl-request.adoc[]
+include::{snippets}/asset-rest-controller-test/test1_create-asset/http-request.adoc[]
+include::{snippets}/asset-rest-controller-test/test1_create-asset/http-response.adoc[]
+
+=== 에셋 업데이트
+include::{snippets}/asset-rest-controller-test/test2_update-asset/curl-request.adoc[]
+include::{snippets}/asset-rest-controller-test/test2_update-asset/http-request.adoc[]
+include::{snippets}/asset-rest-controller-test/test2_update-asset/http-response.adoc[]
+
+=== 에셋 정보
+include::{snippets}/asset-rest-controller-test/test3_get-asset/curl-request.adoc[]
+include::{snippets}/asset-rest-controller-test/test3_get-asset/http-request.adoc[]
+include::{snippets}/asset-rest-controller-test/test3_get-asset/http-response.adoc[]
+
+=== 에셋 삭제
+include::{snippets}/asset-rest-controller-test/test4_drop-asset/curl-request.adoc[]
+include::{snippets}/asset-rest-controller-test/test4_drop-asset/http-request.adoc[]
+include::{snippets}/asset-rest-controller-test/test4_drop-asset/http-response.adoc[]
+
+
+
+[[search]]
+== 검색
+검색에 대한 REST API 예제
+
+=== 검색
+include::{snippets}/search-rest-controller-test/test1_search/curl-request.adoc[]
+include::{snippets}/search-rest-controller-test/test1_search/http-request.adoc[]
+include::{snippets}/search-rest-controller-test/test1_search/http-response.adoc[]
+
+
+[[table]]
+== 테이블
+테이블에 대한 REST API 예제
+
+=== 테이블 생성
+include::{snippets}/table-row-rest-controller-test/test1_create-row/curl-request.adoc[]
+include::{snippets}/table-row-rest-controller-test/test1_create-row/http-request.adoc[]
+include::{snippets}/table-row-rest-controller-test/test1_create-row/http-response.adoc[]
+
+=== 테이블 업데이트
+include::{snippets}/table-row-rest-controller-test/test2_update-row/curl-request.adoc[]
+include::{snippets}/table-row-rest-controller-test/test2_update-row/http-request.adoc[]
+include::{snippets}/table-row-rest-controller-test/test2_update-row/http-response.adoc[]
+
+=== 테이블 정보
+include::{snippets}/table-row-rest-controller-test/test3_get-row/curl-request.adoc[]
+include::{snippets}/table-row-rest-controller-test/test3_get-row/http-request.adoc[]
+include::{snippets}/table-row-rest-controller-test/test3_get-row/http-response.adoc[]
+
+=== 테이블 리스트
+include::{snippets}/table-row-rest-controller-test/test4_get-rows/curl-request.adoc[]
+include::{snippets}/table-row-rest-controller-test/test4_get-rows/http-request.adoc[]
+include::{snippets}/table-row-rest-controller-test/test4_get-rows/http-response.adoc[]
+
+=== 테이블 삭제
+include::{snippets}/table-row-rest-controller-test/test5_drop-row/curl-request.adoc[]
+include::{snippets}/table-row-rest-controller-test/test5_drop-row/http-request.adoc[]
+include::{snippets}/table-row-rest-controller-test/test5_drop-row/http-response.adoc[]
+
+
+[[workflow]]
+== 워크플로우
+워크플로우에 대한 REST API 예제
+
+=== 워크플로우 호출
+include::{snippets}/workflow-rest-controller-test/test1_run-workflow/curl-request.adoc[]
+include::{snippets}/workflow-rest-controller-test/test1_run-workflow/http-request.adoc[]
+include::{snippets}/workflow-rest-controller-test/test1_run-workflow/http-response.adoc[]
+
+=== 워크플로우 취소
+include::{snippets}/workflow-rest-controller-test/test2_cancel-workflow/curl-request.adoc[]
+include::{snippets}/workflow-rest-controller-test/test2_cancel-workflow/http-request.adoc[]
+include::{snippets}/workflow-rest-controller-test/test2_cancel-workflow/http-response.adoc[]
+
+
+[[ex]]
+== EX
+EX에 대한 REST API 예제
+
+=== EX 호출
+include::{snippets}/ex-rest-controller-test/test1_call-ex/curl-request.adoc[]
+include::{snippets}/ex-rest-controller-test/test1_call-ex/http-request.adoc[]
+include::{snippets}/ex-rest-controller-test/test1_call-ex/http-response.adoc[]
+
+
+
+[[department]]
+== 부서
+부서에 대한 REST API 예제
+
+=== 부서 추가
+include::{snippets}/department-rest-controller-test/test1_department-create/curl-request.adoc[]
+include::{snippets}/department-rest-controller-test/test1_department-create/http-request.adoc[]
+include::{snippets}/department-rest-controller-test/test1_department-create/http-response.adoc[]
+
+=== 부서 변경
+include::{snippets}/department-rest-controller-test/test2_department-update/curl-request.adoc[]
+include::{snippets}/department-rest-controller-test/test2_department-update/http-request.adoc[]
+include::{snippets}/department-rest-controller-test/test2_department-update/http-response.adoc[]
+
+=== 부서 정보
+include::{snippets}/department-rest-controller-test/test3_department-info/curl-request.adoc[]
+include::{snippets}/department-rest-controller-test/test3_department-info/http-request.adoc[]
+include::{snippets}/department-rest-controller-test/test3_department-info/http-response.adoc[]
+
+=== 부서 트리 정보
+include::{snippets}/department-rest-controller-test/test4_department-tree/curl-request.adoc[]
+include::{snippets}/department-rest-controller-test/test4_department-tree/http-request.adoc[]
+include::{snippets}/department-rest-controller-test/test4_department-tree/http-response.adoc[]
+
+=== 부서 삭제
+include::{snippets}/department-rest-controller-test/test5_department-drop/curl-request.adoc[]
+include::{snippets}/department-rest-controller-test/test5_department-drop/http-request.adoc[]
+include::{snippets}/department-rest-controller-test/test5_department-drop/http-response.adoc[]
+
+[[setting]]
+== 설정
+설정에 대한 REST API 예제
+
+=== 설정 정보
+include::{snippets}/config-rest-controller-test/test1_config/curl-request.adoc[]
+include::{snippets}/config-rest-controller-test/test1_config/http-request.adoc[]
+include::{snippets}/config-rest-controller-test/test1_config/http-response.adoc[]

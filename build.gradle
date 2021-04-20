@@ -1,0 +1,54 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'com.github.spring'
+version = '2021.1'
+sourceCompatibility = '1.8'
+
+repositories {
+    flatDir(dir: 'libs')
+    mavenLocal()
+    mavenCentral()
+}
+
+configurations {
+    providedRuntime
+}
+
+dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    implementation 'org.json:json:20200518'
+    implementation 'com.github.spullara.mustache.java:compiler:0.9.7'
+    implementation 'com.github.jknack:handlebars:4.2.0'
+
+    // DATABASE
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4:1.16'
+
+    implementation 'net.sf.ehcache:ehcache'
+    implementation 'com.mashape.unirest:unirest-java:1.4.9'
+
+    // COMMON
+    implementation 'org.apache.commons:commons-text:1.9'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'org.apache.commons:commons-collections4:4.4'
+    implementation 'commons-io:commons-io:2.8.0'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.4.4'
+    testImplementation 'ru.yandex.qatools.embed:postgresql-embedded:2.10'
+    implementation 'org.postgresql:postgresql:42.2.19'
+}
+
+test {
+    useJUnitPlatform()
+}
+
